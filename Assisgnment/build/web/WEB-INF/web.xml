@@ -7,9 +7,17 @@
         <servlet-name>AttController</servlet-name>
         <servlet-class>controller.AttController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TimetableController</servlet-name>
+        <servlet-class>controller.TimetableController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AttController</servlet-name>
         <url-pattern>/lecture/takeatt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimetableController</servlet-name>
+        <url-pattern>/lecture/timetable</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
