@@ -4,23 +4,18 @@
  */
 package controller;
 
-import dal.AccountDBContext;
-import dal.LecturerDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import model.Account;
-import model.Lecture;
 
 /**
  *
  * @author binhp
  */
-public class LoginController extends HttpServlet {
+public class AttViewController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,7 +38,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("view/login.jsp").forward(request, response);
+        request.getRequestDispatcher("../view/view.jsp").forward(request, response);
 
     }
 
@@ -58,28 +53,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        AccountDBContext db = new AccountDBContext();
-        Account account = db.get(username, password);
-        LecturerDBContext lecDB = new LecturerDBContext();
-        ArrayList<Lecture> lecs = lecDB.list();
-        Lecture l = lecDB.get(account.getDisplayname());
-//        for (Lecture lec : lecs) {
-//            if (account != null && account.getDisplayname().equals(lec.getName())) {
-//                request.getSession().setAttribute("account", account);
-//                response.sendRedirect("lecture/timetable?lid=" + lec.getId());
-//            } else {
-//                response.getWriter().println("Login failed!");
-//            }
-//        }
-        if (account != null) {
-                request.getSession().setAttribute("account", account);
-                request.getSession().setAttribute("lid", l.getId());
-                response.sendRedirect("lecture/timetable?lid=" + l.getId());
-            } else {
-                response.getWriter().println("Login failed!");
-            }
+        request.getRequestDispatcher("../view/view.jsp").forward(request, response);
     }
 
     /**

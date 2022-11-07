@@ -70,5 +70,24 @@ public class LecturerDBContext extends DBContext<Lecture> {
         }
         return lecs;
     }
+    
+    public Lecture get(String displayname) {
+        ArrayList<Lecture> lecs = new ArrayList<>();
+        try {
+            String sql = "SELECT * FROM Lecturer Where lname = ?";
+            PreparedStatement stm = con.prepareStatement(sql);
+            stm.setString(1, displayname);
+            ResultSet rs = stm.executeQuery();
+            if(rs.next()){
+                Lecture l = new Lecture();
+                l.setId(rs.getInt("lid"));
+                l.setName("lname");
+                return l;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(LecturerDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 
 }
