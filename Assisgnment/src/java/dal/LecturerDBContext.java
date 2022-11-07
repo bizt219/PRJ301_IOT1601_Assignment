@@ -16,7 +16,7 @@ import model.Lecture;
  *
  * @author binhp
  */
-public class LecturerDBContext extends DBContext<Lecture>{
+public class LecturerDBContext extends DBContext<Lecture> {
 
     @Override
     public void insert(Lecture model) {
@@ -40,7 +40,7 @@ public class LecturerDBContext extends DBContext<Lecture>{
             PreparedStatement stm = con.prepareStatement(sql);
             stm.setInt(1, id);
             ResultSet rs = stm.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 Lecture l = new Lecture();
                 l.setId(rs.getInt("lid"));
                 l.setName(rs.getString("lname"));
@@ -54,7 +54,21 @@ public class LecturerDBContext extends DBContext<Lecture>{
 
     @Override
     public ArrayList<Lecture> list() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<Lecture> lecs = new ArrayList<>();
+        try {
+            String sql = "SELECT * FROM Lecturer";
+            PreparedStatement stm = con.prepareStatement(sql);
+            ResultSet rs = stm.executeQuery();
+            while(rs.next()){
+                Lecture l = new Lecture();
+                l.setId(rs.getInt("lid"));
+                l.setName(rs.getString("lname"));
+                lecs.add(l);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(LecturerDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lecs;
     }
-    
+
 }

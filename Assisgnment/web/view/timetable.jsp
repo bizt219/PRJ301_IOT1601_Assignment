@@ -18,15 +18,19 @@
     <body>
         <h1 style="margin-left: 10px;">FPT University Academic Portal</h1>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <div class="input-group mb-3" style="margin-left: 10px; margin-top: 10px;width: 30%">
+            <span class="input-group-text" id="inputGroup-sizing-default">Lecturer</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" readonly="readonly" value="${requestScope.lecturer.name}">
+        </div>
         <form action="timetable" method="get">
-            <div class="form-floating" style="width: 20%; margin-left: 10px">
-                <select class="form-select" id="floatingSelectGrid" name="lid">
-                    <option value="1" selected>Sonnt5</option>
-                    <option value="2">Lecture 2</option>
-                    <option value="3">Lecture 3</option>
-                </select>
-                <label for="floatingSelectGrid">Lecture</label>
-            </div>
+            <!--            <div class="form-floating" style="width: 20%; margin-left: 10px">
+                            <select class="form-select" id="floatingSelectGrid" name="lid">
+                                <option value="1">Sonnt5</option>
+                                <option value="2">Lecture 2</option>
+                                <option value="3">Lecture 3</option>
+                            </select>
+                            <label for="floatingSelectGrid">Lecture</label>
+                        </div>-->
             <input type="hidden" name="lid" value="${param.lid}"/>
             <div class="input-group" style="margin-left: 10px; margin-top: 10px;width: 30%">
                 <input type="date" name="from" value="${requestScope.from}" class="form-control">
@@ -46,7 +50,7 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 <c:forEach items="${requestScope.slots}" var="slot" varStatus="loop">
                     <tr>
                         <th scope="row">${loop.index + 1}</th>
