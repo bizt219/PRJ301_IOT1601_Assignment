@@ -3,18 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/controller/TimetableController.java</file>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/web/view/login.jsp</file>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/controller/LoginController.java</file>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/model/Account.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/web/view/att.jsp</file>
             <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/dal/LecturerDBContext.java</file>
             <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/controller/AttViewController.java</file>
             <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/dal/ViewDBContext.java</file>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/dal/SessionDBContext.java</file>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/dal/AccountDBContext.java</file>
             <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/web/view/view.jsp</file>
             <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/model/Group.java</file>
-            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/model/Student.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/controller/AttController.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/dal/StudentDBContext.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/controller/LoginController.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/dal/SessionDBContext.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/web/view/timetable.jsp</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/model/Session.java</file>
+            <file>file:/C:/Users/binhp/OneDrive/Documents/NetBeansProjects/Assisgnment/src/java/model/Attendance.java</file>
         </group>
     </open-files>
 </project-private>

@@ -33,7 +33,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AttViewController</servlet-name>
-        <url-pattern>/lecture/attview</url-pattern>
+        <url-pattern>/student/attview</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
